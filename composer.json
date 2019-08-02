@@ -1,5 +1,5 @@
 {
-    "name": "javiereguiluz/easy-admin-demo",
+    "name": "shonezlo/easy-admin-demo-complex-forms",
     "license": "MIT",
     "type": "project",
     "description": "A Symfony demo application to showcase the EasyAdmin features.",
@@ -60,7 +60,8 @@
         "auto-scripts": {
             "ckeditor:install": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
-            "cache:clear": "symfony-cmd"
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
