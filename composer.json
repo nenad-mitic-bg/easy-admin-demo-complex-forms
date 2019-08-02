@@ -51,6 +51,7 @@
         "doctrine/doctrine-fixtures-bundle": "^3.2",
         "symfony/browser-kit": "*",
         "symfony/debug-bundle": "*",
+        "symfony/maker-bundle": "^1.12",
         "symfony/phpunit-bridge": "*",
         "symfony/profiler-pack": "^1.0",
         "symfony/var-dumper": "*",
