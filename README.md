@@ -19,9 +19,10 @@ How to install this project
   1. `git clone git@github.com:shonezlo/easy-admin-demo-complex-forms.git`
   2. `cd easy-admin-demo-complex-forms`
   3. `composer install`
-  4. `php bin/console doctrine:fixtures:load`
-  5. `php bin/console server:run`
-  6. Browse `http://127.0.0.1:8000/admin/`
+  4. `php bin/console doctrine:schema:update --force`
+  5. `php bin/console doctrine:fixtures:load`
+  6. `php bin/console server:run`
+  7. Browse `http://127.0.0.1:8000/admin/`
 
 The project comes with an SQLite sample database, but you can also create your
 own database and load the fixtures data:
