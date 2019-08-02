@@ -76,8 +76,8 @@ class Purchase
     /**
      * The customer billing address.
      *
-     * @var array
-     * @ORM\Column(type="text")
+     * @var StreetAddress
+     * @ORM\Embedded(class="StreetAddress")
      */
     protected $billingAddress;
 
@@ -108,12 +108,13 @@ class Purchase
         $this->createdAt = new \DateTime();
         $this->deliveryDate = new \DateTime('+2 days');
         $this->deliveryHour = new \DateTime('14:00');
+        $this->billingAddress = new StreetAddress();
     }
 
     /**
      * Set the address where the customer want its billing.
      *
-     * @param string $billingAddress
+     * @param StreetAddress $billingAddress
      */
     public function setBillingAddress($billingAddress)
     {
@@ -121,7 +122,7 @@ class Purchase
     }
 
     /**
-     * @return string
+     * @return StreetAddress
      */
     public function getBillingAddress()
     {
