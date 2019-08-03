@@ -40,6 +40,18 @@ class StreetAddress
      */
     private $country;
 
+    /**
+     * EasyAdmin uses __toString by default when showing stuff on list page.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->line1 . ($this->line2 ? ' ' : '') . $this->line2
+                . ' ' . $this->postCode . ' ' . $this->city
+                . ', ' . $this->country;
+    }
+
     public function getLine1()
     {
         return $this->line1;
